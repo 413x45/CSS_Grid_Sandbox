@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Area</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header header' 
+                'content content sidebar'
+                'box-1 box-2 box-2'
+                'box-3 box-3 box-3'
+                'footer footer footer';
+            grid-gap: 1rem;
+        }
+        .header {
+            grid-area: header;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .content {
+            grid-area: content;
+        }
+        .sidebar {
+            grid-area: sidebar;
+        }
+        .box-1 {
+            grid-area: box-1;
+        }
+        .box-2 {
+            grid-area: box-2;
+        }
+        .box-3 {
+            grid-area: box-3;
+        }
+        .footer {
+            grid-area: footer;
+        }
+
+        .header, .content, .sidebar, .box-1, .box-2, .box-3, .footer {
+            border: 1px #333 solid;
+            padding: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            grid-template-areas: 
+                'header' 
+                'content'
+                'sidebar'
+                'box-1' 
+                'box-2' 
+                'box-3'
+                'footer';
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>My World</h1>
+        </header>
+
+        <section class="content">
+            <h3>Welcome To My World</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, qui quas! Qui, quia alias et voluptatum inventore omnis quibusdam accusamus vel corporis amet soluta possimus nemo excepturi quo vero! Dignissimos!
+            </p>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Contact Me</h3>
+            <ul>
+                <li>Hi I'm Alexas</li>
+                <li>123 Magical Lane, Imaginary World</li>
+                <li>thisisnotreal@email.com</li>
+                <li>000-000-0000</li>
+            </ul>
+        </aside>
+
+        <div class="box-1">
+            <h3>Heading</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab temporibus exercitationem aspernatur ad! Accusantium aut laborum necessitatibus pariatur odio facilis. Nihil suscipit vero aliquid, error sit similique autem? 
+            </p>
+        </div>
+        <div class="box-2">
+            <h3>Heading</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab temporibus exercitationem aspernatur ad! Accusantium aut laborum necessitatibus pariatur odio facilis. Nihil suscipit vero aliquid, error sit similique autem? 
+            </p>
+        </div>
+        <div class="box-3">
+            <h3>Heading</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab temporibus exercitationem aspernatur ad! Accusantium aut laborum necessitatibus pariatur odio facilis. Nihil suscipit vero aliquid, error sit similique autem? 
+            </p>
+        </div>
+
+        <footer class="footer">
+            <p>Copyright &copy; 2019</p>
+        </footer>
+    </div>
+</body>
+</html>
